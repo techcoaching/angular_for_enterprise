@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<testcases>
+    <testcase
+      key="canLoinWithValidCredential"
+      loginUrl="login"
+      userName="tu.tran@orientsoftware.net"
+      pwd="123456"
+      urlAfterLogin="http://tinyerp.azurewebsites.net/roles"
+      />
+</testcases>

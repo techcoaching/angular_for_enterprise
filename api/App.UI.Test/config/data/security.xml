@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<testcases>
+    <testcase
+      key="canSeeNewRolePage"
+      userName="tu.tran@orientsoftware.net"
+      pwd="123456"
+      />
+  <testcase
+      key="canAddNewRole"
+      userName="tu.tran@orientsoftware.net"
+      pwd="123456"
+      name="test role 2"
+      desc="test desc 2"
+      />
+</testcases>

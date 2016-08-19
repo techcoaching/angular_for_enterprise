@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<environments>
+  <environment>
+    <name>MyERP-Firefox</name>
+    <description>Verify on firefox</description>
+    <width>1000</width>
+    <height>1000</height>
+    <baseUrl>http://tinyerp.azurewebsites.net/</baseUrl>
+    <report type="Excel"></report>
+    <browser type="Firefox" name="Firefox browser" version="" descriotion="" />
+    <suite path="suits\registration.xml" dataFile="data\registration.xml" />
+    <suite path="suits\security.xml" dataFile="data\security.xml" />
+  </environment>
+</environments>

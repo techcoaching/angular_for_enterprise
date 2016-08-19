@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<suite>
+    <name>Security</name>
+    <description>User, Roles, Permission</description>
+    <testcases path="suits\security\roles.xml"/>
+</suite>

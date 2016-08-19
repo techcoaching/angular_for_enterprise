@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<testcases>
+    <include path="suits\registration\login_steps.xml" alias="login" />
+    <include path="suits\_share\navigation_steps.xml" alias="navigate" />
+    <include path="suits\_share\common_steps.xml" alias="common" />
+    <testcase>
+        <key>canLoinWithValidCredential</key>
+        <name>canLoinWithValidCredential</name>
+        <description>Can Login</description>
+        <!--<step action="common.navigateTo"></step>
+        <step action="login.performLogin"></step>
+        <step action="login.checkInvalidLoginMessage"></step>   -->
+        <step action="navigate.navigateTo" url="{{baseUrl}}login" timeout="5" />
+        <step action="login.performLogin" email="{{userName}}" pwd="{{pwd}}" />
+        <step action="common.isMatchUrl" url="{{baseUrl}}roles"/>
+    </testcase> 
+</testcases>

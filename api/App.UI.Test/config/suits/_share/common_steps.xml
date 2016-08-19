@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<steps>
+    <step name="isMatchUrl">
+      <assert element="custom:url" value="{{url}}" type="Browser"  />
+    </step>
+</steps>
+
+

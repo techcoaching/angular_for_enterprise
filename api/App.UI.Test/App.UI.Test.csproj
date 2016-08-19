@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5C8D085F-8373-4795-898C-3DB7F868004B}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>App.UI.Test</RootNamespace>
+    <AssemblyName>App.UI.Test</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Selenium.WebDriverBackedSelenium">
+      <HintPath>..\packages\Selenium\2.53.1\Selenium.WebDriverBackedSelenium.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ThoughtWorks.Selenium.Core">
+      <HintPath>..\packages\Selenium\2.53.1\ThoughtWorks.Selenium.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver">
+      <HintPath>..\packages\Selenium\2.53.1\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support">
+      <HintPath>..\packages\Selenium\2.53.1\WebDriver.Support.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.release.config">
+      <DependentUpon>App.Config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App.debug.config">
+      <DependentUpon>App.Config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App.config" />
+    <None Include="config\configuration.debug.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="config\configuration.release.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="resources\templates\report.xlsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="config\data\security.xml" />
+    <Content Include="config\data\registration.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="config\environments.xml" />
+    <Content Include="config\suits\security.xml" />
+    <Content Include="config\suits\security\role_steps.xml" />
+    <Content Include="config\suits\security\roles.xml" />
+    <Content Include="config\suits\_share\common_steps.xml" />
+    <Content Include="config\suits\_share\navigation_steps.xml" />
+    <Content Include="config\suits\registration.xml" />
+    <Content Include="config\suits\registration\login.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="config\suits\registration\login_steps.xml" />
+    <Content Include="resources\templates\email\uitest\uitesttesultnotificationemail.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Application.Common\App.Common.csproj">
+      <Project>{fa3eaa76-30ec-41fd-b9b1-c46158b9e821}</Project>
+      <Name>App.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Application.Resources\Application.Resources.csproj">
+      <Project>{fa336d7d-ae3c-49e6-bcf2-81ea7f69ca8a}</Project>
+      <Name>Application.Resources</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="output\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <UsingTask TaskName="TransformXml" AssemblyFile="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\Web\Microsoft.Web.Publishing.Tasks.dll" />
+  <Target Name="AfterBuild">
+    <TransformXml Source="app.config" Transform="app.$(Configuration).config" Destination="$(OutputPath)\App.UI.Test.vshost.exe.config" />
+  </Target>
+</Project>

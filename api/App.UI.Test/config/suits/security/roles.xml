@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<testcases>
+  <include path="suits\registration\login_steps.xml" alias="login" />
+  <include path="suits\_share\navigation_steps.xml" alias="navigate" />
+  <include path="suits\_share\common_steps.xml" alias="common" />
+  <include path="suits\security\role_steps.xml" alias="roles" />
+  <testcase>
+    <key>canSeeNewRolePage</key>
+    <name>canSeeNewRolePage</name>
+    <description>User can login and navigate to add role</description>
+    <step action="navigate.navigateTo" url="{{baseUrl}}login" timeout="5" />
+    <step action="login.performLogin" email="{{userName}}" pwd="{{pwd}}" />
+    <step action="roles.gotoAddNewRole" sleepBefore="15" />
+    <step action="common.isMatchUrl" url="{{baseUrl}}addRole"/>
+  </testcase>
+  <testcase>
+    <key>canAddNewRole</key>
+    <name>canAddNewRole</name>
+    <description>User can login add new role</description>
+    <step action="navigate.navigateTo" url="{{baseUrl}}login" timeout="5" />
+    <step action="login.performLogin" email="{{userName}}" pwd="{{pwd}}" />
+    <step action="roles.gotoAddNewRole" sleepBefore="5" />
+    <step action="roles.addNewRole"  name="{{name}}" desc="{{desc}}"/>
+    <step action="common.isMatchUrl" url="{{baseUrl}}roles" sleepBefore="15"/>
+  </testcase>
+</testcases>

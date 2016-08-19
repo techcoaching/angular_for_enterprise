@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<steps>
+    <step name="openLoginPage">
+        <navigate url="{{loginUrl}}" timeout="5"/>
+    </step>
+    <step name="performLogin">
+        <input element="id:email"  value="{{email}}"></input>
+        <input element="id:pwd"  value="{{pwd}}"></input>
+        <click element="id:signIn" />
+    </step>
+    <step name="checkInvalidLoginMessage">
+        <assert element="classname:parsley-error" type="Exist"  />
+    </step>
+</steps>

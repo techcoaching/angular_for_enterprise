@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<steps>
+  <step name="gotoAddNewRole">
+    <click element="id:btnAddRole" />
+  </step>
+  <step name="addNewRole">
+    <input element="id:name"  value="{{name}}"></input>
+    <input element="id:desc"  value="{{desc}}"></input>
+    <click element="id:save" />
+  </step>
+</steps>
