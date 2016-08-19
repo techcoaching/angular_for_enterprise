@@ -1,0 +1,61 @@
+{
+    "roles":{
+        "title":"Roles",
+        "addRoleAction":"Add Role",
+        "validation":{
+            "idIsInvalid":"Invalid Role",
+            "roleNotExist":"Can not found this Role, Please try again."
+        }
+    },
+    "addOrUpdateRole":{
+        "title":"Add Role",
+        "name":"Name",
+        "inputName":"Please input name of Role",
+        "desc":"Description",
+        "inputDesc":"Please input description for Role",
+        "permission":"Permissions",
+        "inputPermissions":"Please select Permission for this Role",
+        "validation":{
+            "nameIsRequire":"Please input name of Role",
+            "keyIsRequire":"",
+            "nameAlreadyExist":"This name is already existed. Please input another name"
+        }
+    },
+    "permissions":{
+        "title":"Permissions",
+        "addPermissionAction":"Add Permission"
+    },
+    "addOrUpdatePermission":{
+        "title":"Add Permission",
+        "name":"Name",
+        "inputName":"Please input name of Permission",
+        "desc":"Description",
+        "inputDesc":"Please input description for Permission",
+        "key":"Key",
+        "inputKey":"Please input key for Permission",
+        "validation":{
+            "nameIsRequire":"Please input name of Permission",
+            "nameAlreadyExist":"This name is already existed. Please input another name",
+            "keyIsRequire":"Please input key of Permission",
+            "keyAlreadyExist":"This key is already existed. Please input another key."
+        }
+    },
+    "userGroups":{
+        "title":"UserGroups",
+        "addUserGroupAction":"Add UserGroup"
+    },
+    "addUserGroup":{
+        "title":"Add UserGroup",
+        "name":"Name",
+        "inputName":"Please input name of UserGroup",
+        "desc":"Description",
+        "inputDesc":"Please input description for UserGroup",
+        "permission":"Permissions",
+        "inputPermissions":"Please select Permission for this UserGroup",
+        "validation":{
+            "nameIsRequire":"Please input name of UserGroup",
+            "keyIsRequire":"",
+            "nameAlreadyExist":"This name is already existed. Please input another name"
+        }
+    }
+}
