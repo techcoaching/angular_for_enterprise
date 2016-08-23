@@ -59,6 +59,8 @@
     <Compile Include="Registration\User\UserQuickProfile.cs" />
     <Compile Include="Registration\User\UserSignInRequest.cs" />
     <Compile Include="Registration\User\UserSignInResponse.cs" />
+    <Compile Include="Security\IPermissionService.cs" />
+    <Compile Include="Security\PermissionListItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\App.Entity\App.Entity.csproj">

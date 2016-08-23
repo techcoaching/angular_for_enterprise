@@ -23,7 +23,7 @@
     },
     "permissions":{
         "title":"Permissions",
-        "addPermissionAction":"Add Permission"
+        "addPermission":"Add Permission"
     },
     "addOrUpdatePermission":{
         "title":"Add Permission",

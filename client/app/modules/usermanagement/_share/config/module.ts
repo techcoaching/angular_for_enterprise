@@ -18,7 +18,7 @@ function createModule() {
     module.addRoutes([
         { path: "/roles", name: "Roles", component: Roles, data: { authentication: AuthenticationMode.Require }, useAsDefault: true },
         { path: "/groups", name: "Groups", component: Groups, data: { authentication: AuthenticationMode.Require } },
-        { path: "/permissions", name: "Permissions", component: Permissions, data: { authentication: AuthenticationMode.Require } },
+        // { path: "/permissions", name: "Permissions", component: Permissions, data: { authentication: AuthenticationMode.Require } },
     ]);
     return module;
 }

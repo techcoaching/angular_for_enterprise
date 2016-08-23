@@ -191,6 +191,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Features\Security\PermissionsController.cs" />
     <Compile Include="Features\Share\Authorize\UserLoginAuthorization.cs" />
     <Compile Include="Features\Share\Bootstrap.cs" />
     <Compile Include="Features\Share\Tasks\Data\CreateTestUsersTask.cs" />
