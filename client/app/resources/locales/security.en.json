@@ -25,6 +25,15 @@
         "title":"Permissions",
         "addPermission":"Add Permission"
     },
+    "addPermission":{
+        "pageTitle":"Permimssions",
+        "name":"Name",
+        "key":"Key",
+        "description":"Description",
+        "nameIsRequired":"Name of permission was required",
+        "keyIsRequired":"Key of permission was required",
+        "keyHasNotWhiteSpace":"Key of permission should not contain whitespace"
+    },
     "addOrUpdatePermission":{
         "title":"Add Permission",
         "name":"Name",

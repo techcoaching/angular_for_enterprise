@@ -59,6 +59,7 @@
     <Compile Include="Registration\User\UserQuickProfile.cs" />
     <Compile Include="Registration\User\UserSignInRequest.cs" />
     <Compile Include="Registration\User\UserSignInResponse.cs" />
+    <Compile Include="Security\CreatePermissionRequest.cs" />
     <Compile Include="Security\IPermissionService.cs" />
     <Compile Include="Security\PermissionListItem.cs" />
   </ItemGroup>

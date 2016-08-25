@@ -39,4 +39,5 @@ function configIoC() {
   window.ioc = ioc;
   let resourceHelper: ResourceHelper = window.ioc.resolve("IResource");
   resourceHelper.load(["common", "registration", "security"]);
+   window.ioc.resolve("ILogger").info("test consolelogger");
 }

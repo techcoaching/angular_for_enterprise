@@ -46,6 +46,24 @@ namespace App.Api.Features.Security
             }
             return response;
         }
+
+        [Route("")]
+        [HttpPost]
+        public IResponseData<string> CreatePermission([FromBody]CreatePermissionRequest request)
+        {
+            IResponseData<string> response = new ResponseData<string>();
+            try
+            {
+                IPermissionService perservice = IoC.Container.Resolve<IPermissionService>();
+                perservice.Create(request);
+            }
+            catch (ValidationException ex)
+            {
+                response.SetStatus(System.Net.HttpStatusCode.PreconditionFailed);
+                response.SetErrors(ex.Errors);
+            }
+            return response;
+        }
     }
 
 }
