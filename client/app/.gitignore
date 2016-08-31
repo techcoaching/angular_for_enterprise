@@ -1,4 +1,4 @@
 dist
 *.js.map
 *.js
-app/resources/
+!app/resources/**
