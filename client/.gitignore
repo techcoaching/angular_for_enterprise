@@ -5,3 +5,5 @@ bower_components/
 typings/
 dist
 /node_modules/rxjs
+
+npm-debug.log*
