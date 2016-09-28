@@ -1,0 +1,11 @@
+<div class="x_panel">
+   	<h3 class="x_title title_right">
+          {{i18n.security.permissions.title}}
+          <page-actions class="pull-right" [actions]=model.actions></page-actions>
+    </h3>
+    <div class="page-content x_content">
+        <grid [options]=model.options [eventKey]=model.eventKey
+              (onItemEditClicked)="onItemEditClicked($event)"
+              (onItemDeleteClicked)="onItemDeleteClicked($event)"></grid>
+    </div>
+</div>

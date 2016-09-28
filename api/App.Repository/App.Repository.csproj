@@ -56,6 +56,7 @@
     <Compile Include="Common\ILanguageRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registration\IUserRepository.cs" />
+    <Compile Include="Security\IPermissionRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\App.Entity\App.Entity.csproj">
