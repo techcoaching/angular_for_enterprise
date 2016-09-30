@@ -1,5 +1,4 @@
 import { IConnector } from '../../../../common/connectors/iconnector';
-import { RESTConnector } from '../../../../common/connectors/RESTConnector';
 import appConfig from '../../../../common/helpers/configHelper';
 
 let permissionService = {
@@ -19,6 +18,6 @@ function deletePermission(itemId:any){
     appConfig.getAppConfig().api.baseUrl,
     itemId
     );
-  let connector: RESTConnector = window.ioc.resolve('IConnector');
+  let connector: IConnector = window.ioc.resolve('IConnector');
   return connector.delete(url);
 }
