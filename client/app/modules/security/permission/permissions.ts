@@ -1,7 +1,6 @@
 import { Component } from 'angular2/core';
-import { PageActions } from '../../../common/directives/page/pageActions';
 import { BasePage, PageAction } from '../../../common/models/ui';
-import { Grid } from '../../../common/directives/grid/grid';
+import { PageActions, Grid } from '../../../common/directive';
 
 import { PermissionsModel } from './PermissionsModel';
 import permissionService from '../_share/services/permissionService';
