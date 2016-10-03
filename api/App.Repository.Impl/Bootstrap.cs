@@ -14,6 +14,7 @@ namespace App.Repository.Impl
         {
             context.RegisterTransient<IUserRepository, UserRepository>();
             context.RegisterTransient<Repository.Common.ILanguageRepository, App.Repository.Impl.Common.LanguageRepository>();
+            context.RegisterTransient<Repository.Security.IPermissionRepository, App.Repository.Impl.Security.PermissionRepository>();
         }
     }
 }
